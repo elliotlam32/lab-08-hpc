@@ -1,0 +1,4 @@
+JobID           JobName      User    Account  Partition  AllocCPUS              Submit               Start    Elapsed      State ExitCode 
+------------ ---------- --------- ---------- ---------- ---------- ------------------- ------------------- ---------- ---------- -------- 
+22845340_[1]  summarize    xuz4xe     ds2022    gpu-mig          0 2026-11-11T19:07:39             Unknown   00:00:00    PENDING      0:0 
+22848619_[1+  summarize    xuz4xe     ds2022    gpu-mig          0 2026-11-11T20:12:36             Unknown   00:00:00    PENDING      0:0 
