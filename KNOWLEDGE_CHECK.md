@@ -12,7 +12,9 @@ Redirect the command's output to `results/job-history.txt` and include the file 
 
 **Your answer:** Provide the entire command you used, including all CLI options.
 
-...
+sacct -u $USER -S 2026-11-04 \
+  --format=JobID,JobName,NodeList,Partition,Account,User,State,Start,Elapsed \
+  > results/job-history.txt
 
 ## 2. Slurm: did every array task run at the same time?
 
@@ -24,7 +26,7 @@ You submitted your entire job array with one `sbatch` command, but Slurm schedul
 
 **Your answer:** Did all tasks in the array start at the same time? Was the elapsed time identical for every task? Explain why or why not.
 
-...
+No, the tasks did not all start at the same time. The first group (tasks 1 to 7 and others) started at 19:30:13, but later tasks such as 8 and 9 started at 19:30:58, because the limited amount of gpus are shared by the whole cluster and Slurm starts tasks as gpus become free. The elapsed times were also not the same(18 to 20 seconds), since each book has a different length and loading the model takes slightly different time on each run.
 
 ## 3. Slurm: did my job use what it asked for?
 
@@ -36,5 +38,5 @@ Suppose your next job array has 1,000 books instead of 101. Before you submit it
 
 **Your answer:** How much memory and time did the task use, compared with what your script asked for? What would you change in your script, and why?
 
-...
+This task used 1.36 GB of memory and 19 seconds of time. The script asked for/allowed for 16GB of memory and 5 minutes of time to be used. I'd make the memory request and the time request smaller, because that would allow more tasks to run on the nodes at once, this is important when there are a significant amount of tasks that need to be run.
 

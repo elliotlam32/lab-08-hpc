@@ -1,0 +1,12 @@
+Job ID: 23088034
+Array Job ID: 23088033_1
+Cluster: shen
+User/Group: xuz4xe/users
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 2
+CPU Utilized: 00:00:10
+CPU Efficiency: 26.32% of 00:00:38 core-walltime
+Job Wall-clock time: 00:00:19
+Memory Utilized: 1.36 GB
+Memory Efficiency: 8.50% of 16.00 GB (16.00 GB/node)

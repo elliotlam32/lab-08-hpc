@@ -68,7 +68,7 @@ def upload_summary(key, summary, genre, job):
     client = MongoClient(
         os.environ["MONGODB_ATLAS_URL"],
         username=os.environ["MONGODB_ATLAS_USER"],
-        password=os.environ["MONGODB_ATLAS_PASSWORD"],
+        password=os.environ["MONGODB_ATLAS_PWD"],
     )
     try:
         result = client["gutenberg"]["books"].update_one(
